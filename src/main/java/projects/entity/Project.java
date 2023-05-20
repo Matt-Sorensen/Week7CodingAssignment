@@ -8,110 +8,115 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * The Project class represents a project entity.
+ * 
  * @author Promineo
  *
  */
 public class Project {
-  private Integer projectId;
-  private String projectName;
-  private BigDecimal estimatedHours;
-  private BigDecimal actualHours;
-  private Integer difficulty;
-  private String notes;
+	private Integer projectId;
+	private String projectName;
+	private BigDecimal estimatedHours;
+	private BigDecimal actualHours;
+	private Integer difficulty;
+	private String notes;
 
-  private List<Material> materials = new LinkedList<>();
-  private List<Step> steps = new LinkedList<>();
-  private List<Category> categories = new LinkedList<>();
+	private List<Material> materials = new LinkedList<>();
+	private List<Step> steps = new LinkedList<>();
+	private List<Category> categories = new LinkedList<>();
 
-  public Integer getProjectId() {
-    return projectId;
-  }
+	public Integer getProjectId() {
+		return projectId;
+	}
 
-  public void setProjectId(Integer projectId) {
-    this.projectId = projectId;
-  }
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
+	}
 
-  public String getProjectName() {
-    return projectName;
-  }
+	public String getProjectName() {
+		return projectName;
+	}
 
-  public void setProjectName(String projectName) {
-    this.projectName = projectName;
-  }
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
 
-  public BigDecimal getEstimatedHours() {
-    return estimatedHours;
-  }
+	public BigDecimal getEstimatedHours() {
+		return estimatedHours;
+	}
 
-  public void setEstimatedHours(BigDecimal estimatedHours) {
-    this.estimatedHours = estimatedHours;
-  }
+	public void setEstimatedHours(BigDecimal estimatedHours) {
+		this.estimatedHours = estimatedHours;
+	}
 
-  public BigDecimal getActualHours() {
-    return actualHours;
-  }
+	public BigDecimal getActualHours() {
+		return actualHours;
+	}
 
-  public void setActualHours(BigDecimal actualHours) {
-    this.actualHours = actualHours;
-  }
+	public void setActualHours(BigDecimal actualHours) {
+		this.actualHours = actualHours;
+	}
 
-  public Integer getDifficulty() {
-    return difficulty;
-  }
+	public Integer getDifficulty() {
+		return difficulty;
+	}
 
-  public void setDifficulty(Integer difficulty) {
-    this.difficulty = difficulty;
-  }
+	public void setDifficulty(Integer difficulty) {
+		this.difficulty = difficulty;
+	}
 
-  public String getNotes() {
-    return notes;
-  }
+	public String getNotes() {
+		return notes;
+	}
 
-  public void setNotes(String notes) {
-    this.notes = notes;
-  }
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
 
-  public List<Material> getMaterials() {
-    return materials;
-  }
+	public List<Material> getMaterials() {
+		return materials;
+	}
 
-  public List<Step> getSteps() {
-    return steps;
-  }
+	public List<Step> getSteps() {
+		return steps;
+	}
 
-  public List<Category> getCategories() {
-    return categories;
-  }
+	public List<Category> getCategories() {
+		return categories;
+	}
 
-  @Override
-  public String toString() {
-    String result = "";
-    
-    result += "\n   ID=" + projectId;
-    result += "\n   name=" + projectName;
-    result += "\n   estimatedHours=" + estimatedHours;
-    result += "\n   actualHours=" + actualHours;
-    result += "\n   difficulty=" + difficulty;
-    result += "\n   notes=" + notes;
-    
-    result += "\n   Materials:";
-    
-    for(Material material : materials) {
-      result += "\n      " + material;
-    }
-    
-    result += "\n   Steps:";
-    
-    for(Step step : steps) {
-      result += "\n      " + step;
-    }
-    
-    result += "\n   Categories:";
-    
-    for(Category category : categories) {
-      result += "\n      " + category;
-    }
-    
-    return result;
-  }
+	// Overridden toString() method to provide a string representation of the
+	// project, including its ID, name, estimated hours, actual hours, difficulty,
+	// notes, and details of related materials, steps, and categories.
+	@Override
+	public String toString() {
+		String result = "";
+
+		result += "\n   ID=" + projectId;
+		result += "\n   name=" + projectName;
+		result += "\n   estimatedHours=" + estimatedHours;
+		result += "\n   actualHours=" + actualHours;
+		result += "\n   difficulty=" + difficulty;
+		result += "\n   notes=" + notes;
+
+		result += "\n   Materials:";
+
+		for (Material material : materials) {
+			result += "\n      " + material;
+		}
+
+		result += "\n   Steps:";
+
+		for (Step step : steps) {
+			result += "\n      " + step;
+		}
+
+		result += "\n   Categories:";
+
+		for (Category category : categories) {
+			result += "\n      " + category;
+		}
+
+		return result;
+	}
 }
